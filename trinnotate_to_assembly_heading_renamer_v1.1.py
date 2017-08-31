@@ -39,7 +39,7 @@ def fastaIdentifierRenamer(fastaFile, trinotateFile, outputFile):
         combinedNames.append((tranIDList[i], geneNameList[i]))
         
     fileToWrite = open(outputFile, 'w')
-    trinityRegex2 = '>(.*) \| (.*)'
+    trinityRegex2 = '>(\S*) (.*)'
     fasta = open(fastaFile)
         
     for line in fasta:
