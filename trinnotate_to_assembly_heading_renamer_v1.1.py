@@ -53,10 +53,10 @@ def fastaIdentifierRenamer(fastaFile, trinotateFile, outputFile):
             for name in combinedNames:
                 if name[0] == trinityNamesDivided[0]:
                     if name[1] == '.':
-                        fileToWrite.write(">"+trinityNamesDivided[1]+" | "+trinityNamesDivided[0]+ " | unidentified transcript \n")
+                        fileToWrite.write(">"+trinityNamesDivided[0]+" | "+trinityNamesDivided[1]+ " | unidentified transcript \n")
                         break
                     else:
-                        fileToWrite.write(">"+trinityNamesDivided[1]+" | "+trinityNamesDivided[0]+ " | "+name[1]+'\n')
+                        fileToWrite.write(">"+trinityNamesDivided[0]+" | "+trinityNamesDivided[1]+ " | "+name[1]+'\n')
                         break
                     #if it is just a period then need to keep original or just skip the whole thing
                     
